@@ -10,15 +10,13 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-    background: url(img/brain.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 /*
@@ -100,20 +98,231 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+h1 {
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+    font-size: 48px;
+    position:fixed;
+    left: 50%;
+    top: 75%;
+    color:aliceblue;
+}
+
+#bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+
+#bg img {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    opacity: 0.9;
+}
 
 
+#cssmenu {
+  background: #27aae1;
+  width: auto;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover {
+  color: #333333;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+}
+#cssmenu ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.active a {
+  color: #333333;
+}
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+#cssmenu.align-right li.last > a:after,
+#cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+#cssmenu.align-right li:first-child a:after {
+  display: none;
+}
 
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+    float: none;
+    display: block;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+    border: 0;
+  }
+  #cssmenu ul li a:after {
+    display: none;
+  }
+  #cssmenu ul li a:before {
+    display: none;
+  }
+}
 
+footer{
+	position: fixed;
+	bottom: 0;
+}
 
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
 
+.footer-basic-centered{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
 
+	padding: 15px;
+	margin-top: 50px;
+}
 
+.footer-basic-centered .footer-company-motto{
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 0;
+}
 
+.footer-basic-centered .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
 
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 20px 0 20px;
+	margin: 0;
+}
 
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
 
+/* If you don't want the footer to be responsive, remove these media queries */
 
+@media (max-width: 600px) {
 
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}
 
 
 /* ==========================================================================
