@@ -10,38 +10,63 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+        
+        <link rel="stylesheet" href="../css/gallery1.css">
+        
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body id="main">
+    <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        
         <div class="m-scene">
+        
             <header>
                 <div id='cssmenu'>
                 <ul>
-                    <li><img style="width:100%;" src="img/brain-logo.png" id="logo" alt=""></li>
-                   <li class='active'><a href='#'><span>Cerebrum</span></a></li>
-                   <li><a href='pages/frontal-lobe.html'><span>Frontal Lobe</span></a></li>
-                   <li><a href='pages/parietal-lobe.html'><span>Parietal Lobe</span></a></li>
+                    <li><img style="width:100%;" src="../img/brain-logo.png" id="logo" alt=""></li>
+                   <li><a href='../index.html'><span>Cerebrum</span></a></li>
+                   <li class='active'><a href='#'><span>Frontal Lobe</span></a></li>
+                   <li><a href='parietal-lobe.html'><span>Parietal Lobe</span></a></li>
                    <li class='last'><a href='#'><span>Temporal Lobe</span></a></li>
                 </ul>
                 </div>
             </header>
 
 
-            <div class="scene_element scene_element--fadein">
-                <div id="bg">
-                    <img src="img/brain.jpg" alt="">
-                </div>
 
-                <h1>Welcome to your Brain</h1>
+            <!-- IMAGE GALLERY HERE -->
+
+            <div class="scene_element scene_element--fadein">
+            
+                <div class="gallery" align="center">
+
+                    <div class="thumbnails">
+
+                        <img onmouseover="preview.src=img1.src" name="img1" src="../img/img1.jpg" alt="" />
+                        <img onmouseover="preview.src=img2.src" name="img2" src="../img/img2.jpg" alt="" />
+                        <img onmouseover="preview.src=img3.src" name="img3" src="../img/img3.jpg" alt="" />
+                        <img onmouseover="preview.src=img4.src" name="img4" src="../img/img4.png" alt="" />
+                        <img onmouseover="preview.src=img5.src" name="img5" src="../img/img5.png" alt="" />
+
+                    </div>
+
+                    <div class="preview" align="center">
+
+                        <img name="preview" src="../img/img1.jpg" alt="" />
+
+                    </div>
+
+                </div>
+                
             </div>
-        </div>    
+        
+        </div>
         
         <footer class="footer-basic-centered">
 
@@ -58,7 +83,7 @@
 			<p class="footer-company-name">Company Name &copy; 2015</p>
 
 		</footer>
-  
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
